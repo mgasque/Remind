@@ -258,6 +258,8 @@ angular.module('starter.controllers', [])
         })
         .success(function(data,status,headers,config){
           console.log("marche");
+          $scope.goTodo();
+          $scope.getTodos();
         });
     }
 }
