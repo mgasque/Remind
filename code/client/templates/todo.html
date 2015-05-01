@@ -1,0 +1,33 @@
+<ion-view view-title="{{todoSingle[1].title}}">
+<ion-content>
+<div ng-controller="RefreshTodoCtrl" ng-init="getTodoById(todoId);">
+</div>
+<div class="list card">
+	<div class="item">
+		<h1> {{todoSingle[1].title}} </h1>
+		<h2>Added by : {{todoSingle[1].user}} </h2>
+		<p>Deadline : {{todoSingle[1].date}} / {{todoSingle[1].time}} </p>
+	</div>
+
+	<div class="item item-body">
+		<p>
+			{{todoSingle[1].content}}
+		</p>
+	</div>
+	<div class="item tabs tabs-secondary tabs-icon-left">
+		<a class="tab-item" ng-click="completeTodo(todoSingle[1]); goTodo()" href="#/app/todoSingle">
+			<i class="icon ion-checkmark-round"></i>
+			Done
+		</a>
+		<a class="tab-item" href="#/app/addtodo/{{todoId}}">
+			<i class="icon ion-edit"></i>
+			Edit
+		</a>
+		<a class="tab-item" ng-click="removeTodo(todoSingle[1]); goTodo()" href="#/app/todoSingle">
+			<i class="icon ion-close-round"></i>
+			Delete
+		</a>
+	</div>
+</div>
+</ion-content>
+</ion-view>

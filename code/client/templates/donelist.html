@@ -1,0 +1,20 @@
+<ion-view view-title="Done">
+<ion-content>
+<div ng-controller="RefreshTodosCtrl" ng-init="getTodos()">
+</div>
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="search" ng-model="keywords" placeholder="Search">
+  </label>
+  <ion-list>
+    <ion-item ng-repeat="todo in todolist|filter:keywords |filter: {isActive : false}| filter: {'user':user}" href="#/app/todolist/{{todo._id.$oid}}">
+    {{todo.title}}
+    </ion-item>
+  </ion-list>
+</ion-content>
+<div class="bar bar-footer bar-balanced">
+  <div class="title">
+    <a class="button button-clear" href="#/app/addtodo/">ADD TODO</a>
+  </div>
+</div>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view view-title="REMIND">
+  <ion-content>
+  	<div ng-init="getTodoById(todoId)">
+	</div>
+ 	<div class="list list-inset">
+ 	<label class="item item-input">
+ 	User : {{user}}
+ 	</label>
+ 	</div>
+	<div class="list list-inset">
+	   	<label class="item item-input">
+	      		<input type="text" placeholder="Title" ng-model="todoSingle[1].title"></input>
+	    </label>
+	    </div>
+	    <div class="list list-inset">
+  			<label class="item item-input">
+  			  <textarea placeholder="Comments" ng-model="todoSingle[1].content"></textarea>
+  			</label>
+		</div>
+		<label class="item item-input">
+		  <span class="input-label">Date</span>
+		  <input type="date" ng-model="todoSingle[1].date" placeholder="yyyy-MM-dd">
+		  </input>
+		</label>
+		<label class="item item-input">		  
+			<span class="input-label">Time</span>
+			<input type="time" ng-model="todoSingle[1].time" placeholder="ss:mm:hh">
+		</label>
+		<div ng-hide="todoSingle[1].edited">
+	    <label class="item">
+	    	<button class="button button-block button-balanced" type="submit" ng-click="postTodo(todoSingle[1],todoIndex);" >Submit</button>
+	    </label>
+	    </div>
+	</div>
+  </ion-content>
+</ion-view>
