@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5, CSS3 and JavaScript demo</title>
+<link rel="stylesheet" href="style_Doc.css">
+</head>
+<body>
+<!-- Start your code here -->
+ <div class="title">Remind - API Documentation</div>
+ <div id="description">
+    The following documentation presents the various features performed by our Remind API's back end. The user should know that other functionalities are also available and are implemented by the front end, especially sorting algorithms.
+ </div>
+  <div id="todos">
+    <h2> Gestion des ToDos : /remind</h2>
+    <section id="sget">
+      <div class="top_module">
+        <div class="method" id="get"> GET </div>
+        <div class="URI"> /todoget</div>
+      </div>
+      <div class="details"> Gets all ToDos in the database </div>
+    </section>
+    <section id="sget">
+      <div class="top_module">
+        <div class="method" id="get"> GET </div>
+        <div class="URI"> /todoget/{id}</div>
+      </div>
+      <div class="details"> Finds the ToDo referred by its unique {id}  </div>
+    </section>
+    <section id="spost">
+      <div class="top_module">
+        <div class="method" id="post"> POST </div>
+        <div class="URI"> /todopost </div>
+      </div>
+      <div class="details"> Adds a ToDo to your ToDo list </div>
+    </section>
+    <section id="sput">
+      <div class="top_module">
+        <div class="method" id="put"> PUT </div>
+        <div class="URI"> /todoput/{id} </div>
+      </div>
+      <div class="details"> Updates the ToDo whose _id is {id} </div>
+    </section>
+    <section id="sdelete">
+      <div class="top_module">
+        <div class="method" id="delete"> DELETE </div>
+        <div class="URI"> /tododelete/{id} </div>
+      </div>
+      <div class="details"> Deletes the {id}-specified ToDo </div>
+    </section>
+    </div>
+
+
+
+  <div id="users">
+    <h2> Gestion des Users : /remind/usercheck </h2> 
+    <section id="spost">
+      <div class="top_module">
+        <div class="method" id="post"> POST </div>
+        <div class="URI"> /usercheck/register </div>
+      </div>
+      <div class="details"> Adds a new user to Remind application </div>
+    </section>
+    <section id="sput">
+      <div class="top_module">
+        <div class="method" id="put"> PUT </div>
+        <div class="URI"> /usercheck</div>
+      </div>
+      <div class="details"> Connects an existing user to the application </div>
+    </section>
+    <section id="sput">
+      <div class="top_module">
+        <div class="method" id="put"> PUT </div>
+        <div class="URI"> /usercheck/logout</div>
+      </div>
+      <div class="details"> Deconnects the user previously logged on </div>
+    </section>
+    <section id="sget">
+      <div class="top_module">
+        <div class="method" id="get"> GET </div>
+        <div class="URI"> /usercheck/{email} </div>
+      </div>
+      <div class="details"> Gets user by his email to check his status </div>
+    </section>
+  </div>
+
+  <!--
+  <div id="test">
+    <h2> Test </h2>
+    <div class="bigbox">
+    <div class="box1">
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+    <div class="box2">box2</div>
+    </div>
+  </div>
+  -->
+<!-- End your code here -->
+</body>
+</html>
