@@ -8,8 +8,8 @@ angular.module('starter.controllers', [])
 
   /* HOSTNAME  */
 
-  $scope.hostName = 'phdiep.rmorpheus.enseirb.fr/remind/';
-  //$scope.hostName = 'localhost:8080/remind/'
+  //$scope.hostName = 'phdiep.rmorpheus.enseirb.fr/remindv2/';
+  $scope.hostName = 'localhost:8080/remind/'
 
 
 
