@@ -17,7 +17,7 @@ public class Todopost {
 
 	@POST
 	@Consumes("application/json")
-	public  String doConnect(String data) {
+	public  String doPost(String data) {
 		try{
 			System.out.println(data);
 			ManageTodo mTodo = new ManageTodo();
@@ -42,7 +42,6 @@ public class Todopost {
 			mongoClient.close();
 
 		}catch(Exception e){
-			mongoClient.close();
 			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 			return null;
 		}

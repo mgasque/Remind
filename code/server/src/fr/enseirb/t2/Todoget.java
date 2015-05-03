@@ -18,15 +18,13 @@ public class Todoget {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public static String doConnect(@QueryParam("callback") String callback) {
+	public static String goGetTodos(@QueryParam("callback") String callback) {
 		try{
 			MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
 			DB db = mongoClient.getDB( "projet" );
 			DBCollection coll = db.getCollection("todos");
 			DBCursor cursor = coll.find();
-			
-			System.out.println("Client is accessing to DB");
-			
+						
 			String text = "{\"todos\" : [{}";
 			int i=1;
 			while (cursor.hasNext()) { 
@@ -38,7 +36,6 @@ public class Todoget {
 			mongoClient.close();
 			return text;
 		}catch(Exception e){
-			mongoClient.close();
 			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 			return "tata";
 		}
@@ -47,7 +44,7 @@ public class Todoget {
 	@GET
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public static String doConnect1(@QueryParam("callback") String callback, @PathParam("id") String id) {
+	public static String doGetTodo(@QueryParam("callback") String callback, @PathParam("id") String id) {
 		try{
 			ManageTodo mTodo = new ManageTodo();
 			MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
@@ -61,7 +58,6 @@ public class Todoget {
 			return text;
 
 		}catch(Exception e){
-			mongoClient.close();
 			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 			return "toto";
 		}

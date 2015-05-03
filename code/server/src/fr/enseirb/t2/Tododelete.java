@@ -18,7 +18,7 @@ public class Tododelete {
 	@DELETE
 	@Path("/{id}")
 	@Produces("application/json")
-		public  void doPut(String data, @PathParam("id") String id) throws JSONException, UnknownHostException {
+		public  void doDelete(String data, @PathParam("id") String id) throws JSONException, UnknownHostException {
 			System.out.println(id);
 			ManageTodo mTodo = new ManageTodo();
 			MongoClient mongoClient = new MongoClient( "localhost" , 27017 );

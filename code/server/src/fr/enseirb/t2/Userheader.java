@@ -25,7 +25,7 @@ public class Userheader {
 	
 	@PUT
 	@Produces("application/json")
-	public  void login(String data) throws JSONException, UnknownHostException {
+	public  void doLogin(String data) throws JSONException, UnknownHostException {
 
 		ManageUser mUser = new ManageUser();
 		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
@@ -43,7 +43,7 @@ public class Userheader {
 	@PUT
 	@Path("logout")
 	@Produces("application/json")
-	public  void logout(String data) throws JSONException, UnknownHostException {
+	public  void doLogout(String data) throws JSONException, UnknownHostException {
 
 		ManageUser mUser = new ManageUser();
 		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
@@ -81,7 +81,7 @@ public class Userheader {
 	@POST
 	@Path("register")
 	@Consumes("application/json")
-	public  String register(String data) throws UnknownHostException, JSONException {
+	public  String doRegister(String data) throws UnknownHostException, JSONException {
 			
 			System.out.println(data);
 			ManageUser mUser = new ManageUser();
