@@ -148,6 +148,21 @@ angular.module('starter.controllers', [])
 
 .controller('TodolistCtrl', function($scope, $rootScope, $stateParams,$http, $ionicLoading, $window) {
 
+    $scope.orderByPredicate = "title";
+    $scope.orderByReverse = false;
+    
+    // Tri par title:
+
+    $scope.clickPredicateName = function(){
+        $scope.orderByReverse = !$scope.orderByReverse;
+        $scope.orderByPredicate = 'title';
+    }
+
+    $scope.clickPredicateDate = function(){
+        $scope.orderByReverse = !$scope.orderByReverse;
+        $scope.orderByPredicate = 'date';
+    }
+    
 
   $scope.todoId=$stateParams.todoId;
 

@@ -19,8 +19,12 @@
     <i class="icon ion-search placeholder-icon"></i>
     <input type="search" ng-model="keywords" placeholder="Search">
   </label>
+    <div class="row" ng-show="movies.length > 1">
+        <a ng-click="clickPredicateName()" class="col-md-offset-7 col-md-2">By name</a>
+        <a ng-click="clickPredicateDate()" class="col-md-2">By date</a>
+    </div>
   <ion-list>
-    <ion-item ng-repeat="todo in todolist|filter:keywords|filter: {isActive : true}|filter:{'user': user}" href="#/app/todolist/{{todo._id.$oid}}">
+      <ion-item ng-repeat="todo in todolist|filter:keywords|filter: {isActive : true}|filter:{'user': user}|orderBy: orderByPredicate : orderByReverse" href="#/app/todolist/{{todo._id.$oid}}">
     {{todo.title}}
     </ion-item>
   </ion-list>
