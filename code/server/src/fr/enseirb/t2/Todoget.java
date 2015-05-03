@@ -35,8 +35,10 @@ public class Todoget {
 			}
 			text = text + "]}";
 			text = callback +"(" + text + ")";
+			mongoClient.close();
 			return text;
 		}catch(Exception e){
+			mongoClient.close();
 			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 			return "tata";
 		}
@@ -55,9 +57,11 @@ public class Todoget {
 			DBObject todo = mTodo.findTodoByID(coll, id);
 			
 			String text = callback +"({\"todo\" : [{}," + todo.toString() + "]})";
+			mongoClient.close();
 			return text;
 
 		}catch(Exception e){
+			mongoClient.close();
 			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 			return "toto";
 		}

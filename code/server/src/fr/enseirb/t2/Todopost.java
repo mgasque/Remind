@@ -39,8 +39,10 @@ public class Todopost {
 
 				mTodo.addTodo(db, coll, data);
 			} 
+			mongoClient.close();
 
 		}catch(Exception e){
+			mongoClient.close();
 			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
 			return null;
 		}

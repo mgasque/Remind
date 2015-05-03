@@ -36,7 +36,8 @@ public class Userheader {
 		String email = obj.getString("email");
 		String pass = obj.getString("pass");
 
-		mUser.modifyUser(db, coll, email, pass);	
+		mUser.modifyUser(db, coll, email, pass);
+		mongoClient.close();	
 	}
 	
 	@PUT
@@ -53,7 +54,8 @@ public class Userheader {
 		String email = obj.getString("email");
 		String pass = obj.getString("pass");
 
-		mUser.logoutUser(db, coll, email, pass);	
+		mUser.logoutUser(db, coll, email, pass);
+		mongoClient.close();	
 	}
 	
 	@GET
@@ -71,7 +73,7 @@ public class Userheader {
 		System.out.println(obj.toString());
 		
 		String text = callback +"({\"todo\" : [{}," + obj.toString() + "]})";
-		
+		mongoClient.close();
 		return text;	
 		
 	}
@@ -101,6 +103,8 @@ public class Userheader {
 
 				mUser.addUser(db, coll, data);
 			} 
+			mongoClient.close();
+		
 		return null;
 		
 	}

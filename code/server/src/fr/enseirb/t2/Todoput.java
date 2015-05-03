@@ -30,7 +30,8 @@ public class Todoput {
 		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
 		DB db = mongoClient.getDB( "projet" );
 		DBCollection coll = db.getCollection("todos");		
-		mTodo.modifyTodo(db, coll, id, data);	
+		mTodo.modifyTodo(db, coll, id, data);
+		mongoClient.close();	
 		System.out.println(data);
 	}
 }
