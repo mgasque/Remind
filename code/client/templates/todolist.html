@@ -19,10 +19,16 @@
     <i class="icon ion-search placeholder-icon"></i>
     <input type="search" ng-model="keywords" placeholder="Search">
   </label>
-    <div class="row">
-        <a ng-click="clickPredicateName()" class="col-md-offset-7 col-md-2">By name</a>
-        <a ng-click="clickPredicateDate()" class="col-md-2">By date</a>
+  <label class="item">
+  <div class="button-bar">
+      <button class="button button-outline button-balanced" ng-click="clickPredicateName()">
+      By name
+      </button>
+      <button class="button button-outline button-balanced" ng-click="clickPredicateDate()">
+      By date
+    </button>
     </div>
+    </label>
   <ion-list>
       <ion-item ng-repeat="todo in todolist|filter:keywords|filter: {isActive : true}|filter:{'user': user}|orderBy: orderByPredicate : orderByReverse" href="#/app/todolist/{{todo._id.$oid}}">
     {{todo.title}}
