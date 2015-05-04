@@ -89,18 +89,23 @@ public class Userheader {
 			DB db = mongoClient.getDB( "projet" );
 
 			DBCollection coll = db.getCollection("users");
-			
 			System.out.println(data);
 			
 			// Checking _id field
 			JSONObject object = new JSONObject(data);
 			try {
 				String email = object.getString("email");
-				System.out.println(email);
-				mUser.addUser(db, coll, data);	
+				String pass = object.getString("pass");
+				DBObject user = mUser.findUserByEmail(coll, email);
+				if(user == null){
+					mUser.addUser(db, coll, data);	
+				}
+				else{
+					System.out.println("passe pas ");
+					return null;	
+					}
 			} catch (JSONException e){
 				System.out.println("adding");
-
 				mUser.addUser(db, coll, data);
 			} 
 			mongoClient.close();
