@@ -126,8 +126,15 @@ angular.module('starter.controllers', [])
               console.log("marche pas");
             })
             .success(function(data,status,headers,config){
-              $rootScope.connected = true;
-              $rootScope.user = $scope.loginData.email;
+              if(data){
+                $rootScope.connected = true;
+                $rootScope.user = $scope.loginData.email;
+                $scope.logged = !$scope.logged;
+
+              }
+              else{
+                alert("Email already in use, please use another one");
+              }
             });
   };
 
