@@ -1,0 +1,15 @@
+Lien morpheus :
+
+http://phdiep.rmorpheus.enseirb.fr/remindv2/
+
+La connexion en ssh à la machine morpheus était impossible dimanche 3 mai, ce qui a rendu impossible le restant du serveur tomcat pour déployer correctement le serveur à cette url.
+
+Nous précisons cette adresse dans notre début de fichier js/controllers.js ($scope.hostName). Deux choix sont possibles :
+- localhost:8080/remind2/
+- phdiep.rmorpheus.enseirb.fr/remindv2/
+
+Groupe 6
+
+DIEP Philippe
+GASQUE Maxime
+LENHARDT Vincent

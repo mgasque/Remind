@@ -1,0 +1,169 @@
+body, div, section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: 'Proxima Nova','Helvetica',sans-serif;
+  font-size: 18px;
+}
+
+.title {
+  padding: 20px 0px;
+  height: auto;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(255,255,255);
+  background-color: #00C050;
+}
+
+#description, #todos, #users {
+ margin: 25px 20% 0 20%;
+}
+
+#description {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+section {
+  width:  auto;
+  height: auto;
+  margin: 15px 8px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 3px 3px 6px #2F4F4F;
+  -moz-box-shadow: 3px 3px 6px #2F4F4F;
+  box-shadow: 3px 3px 6px #2F4F4F;
+  background-color: #C0C0C0;
+  color: #000000;
+  text-align: left;
+  font-size: 14px;
+}
+
+.top_module {
+  margin: 0px;
+  height: 29px;
+  width: auto;
+  border-bottom: 1px solid #696969;
+}
+
+.method {
+  float:  left;
+  margin: 0;
+  height: auto;
+  width: 150px;
+  color: #C0C0C0;
+  background-color: rgb(0,0,0);
+  text-align: center;
+  padding: 6px 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px 0 6px 0;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+
+#sget:hover {
+  background-color: #ABDBFE;
+}
+#spost:hover {
+  background-color: #9FFF9F;
+}
+#sput:hover {
+  background-color: #FDF380;
+}
+#sdelete:hover {
+  background-color: #FFAAAC;
+}
+
+section:hover .method{
+  color: #000000;
+  font-weight: 900;
+  border-right: 1px solid #696969;
+}
+
+section:hover #get {
+  background-color: #5EC6FD;
+} 
+section:hover #post {
+    background-color: #4FFC45;
+}
+section:hover #put {
+    background-color: #FFCF3E;
+}
+section:hover #delete {
+    background-color: #FF484D;
+}
+/*
+#get:hover {
+    background-color: #5EC6FD;
+}
+#post:hover {
+    background-color: #4FFC45;
+}
+#put:hover {
+    background-color: #FFCF3E;
+}
+#delete:hover {
+    background-color: #FF484D;
+}
+*/
+.URI {
+  float: right;  
+  width: 200px;
+  height: auto;
+  margin: 0;
+  margin-right: 25px;
+  padding: 6px 0;
+  text-align: right;
+  font-size: 18px;
+}
+
+.details {
+  position: relative;
+  margin: 0;
+  padding: 8px;
+  width: auto;
+  height: auto;
+}
+
+/*
+
+
+
+*/
+
+#test {
+  margin: 25px 100px 0 100px;
+}
+.bigbox {
+  height: 50px;
+  width:  auto;
+  margin-bottom: 20px;
+  background-color: #5EC6FD;
+}
+.box1{
+  height: 30px;
+  width:  auto;
+  background-color: #FF484D;
+}
+.left {
+  float:  left;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background-color: #FFCF3E;
+}
+.right {
+  float:  right;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background-color: #FFCF3E;
+}
+
