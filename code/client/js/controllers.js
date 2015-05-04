@@ -126,6 +126,7 @@ angular.module('starter.controllers', [])
               console.log("marche pas");
             })
             .success(function(data,status,headers,config){
+              console.log(data);
               if(data){
                 $rootScope.connected = true;
                 $rootScope.user = $scope.loginData.email;

@@ -93,25 +93,25 @@ public class Userheader {
 			
 			// Checking _id field
 			JSONObject object = new JSONObject(data);
+			String result = null;
 			try {
 				String email = object.getString("email");
 				String pass = object.getString("pass");
 				DBObject user = mUser.findUserByEmail(coll, email);
 				if(user == null){
-					mUser.addUser(db, coll, data);	
+					mUser.addUser(db, coll, data);
+					result =  "{}";
 				}
 				else{
-					System.out.println("passe pas ");
-					return null;	
+					System.out.println("passe pas ");	
 					}
 			} catch (JSONException e){
 				System.out.println("adding");
 				mUser.addUser(db, coll, data);
+				result = "{}";
 			} 
 			mongoClient.close();
-		
-		return null;
-		
+			return result;
 	}
 	
 	
